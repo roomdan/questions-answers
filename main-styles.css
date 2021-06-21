@@ -99,3 +99,68 @@ margin: 1rem;
 
    background-color: rgba(255, 255, 255, 0.2);
 }
+
+.btn-start-trivia {
+    display: none;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height: 3rem;
+    background-color: red;
+    border: transparent hidden;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    
+}
+
+.trivia-game-focus{
+
+    min-width: 50%;
+    max-width: auto;
+    min-height: 35rem;
+    max-height: auto;
+    background-color: rgba(255, 0, 0, 0.342);
+    border-radius: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.trivia-game-focus {
+
+    width: 100%;
+    color: white;
+    font-size: 2rem;
+}
+
+.question-point {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+
+}
+
+.title-questions{
+
+    color: white;
+    font-size: 2rem;
+    margin: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.btn-answers{
+
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: hidden transparent;
+    border-radius: 1rem;
+}
