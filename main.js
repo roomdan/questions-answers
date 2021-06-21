@@ -19,7 +19,7 @@ accesValuesForm= async event => {
     accesApi= await fetch(urlApi);
     accesApiJSON= await accesApi.json();
     accesResult = await accesApiJSON.results;
-    console.log(accesResult)
+    // console.log(accesResult)
 
     initialsPoints= accesResult.length;
     points=1;
