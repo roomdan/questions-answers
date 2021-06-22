@@ -19,6 +19,7 @@ accesValuesForm= async event => {
     accesApi= await fetch(urlApi);
     accesApiJSON= await accesApi.json();
     accesResult = await accesApiJSON.results;
+    console.log(accesResult)
 
     initialsPoints= accesResult.length;
     points=1;
@@ -37,7 +38,7 @@ accesValuesForm= async event => {
        createTitle.innerText = question;
        titleQuestion.appendChild(createTitle);
        //END title Questions//
-
+        console.log(index)
        //START answers//
        correct=accesResult[index].correct_answer;
        createButton = document.createElement("button");
@@ -58,6 +59,14 @@ accesValuesForm= async event => {
         //END answers//
        })
         index++
+        
+    //    console.log(initialsPoints)
+    //    console.log(index)
+
+      if (index===initialsPoints) { document.getElementById("trivia-game-focus").style.display = "none";
+       document.getElementById("end-trivia").style.display = "flex";}
+       document.getElementById("end-trivia").innerText = "End Trivia"
+
 
     }
     addQuestion();
