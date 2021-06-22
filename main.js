@@ -5,8 +5,8 @@ triviaExecute=document.getElementById("trivia-game-focus");
 
 accesValuesForm= async event => {
 
-    document.getElementById("bg-img").style.display = "none"; "trivia-game-focus"
-    document.getElementById("trivia-game-focus").style.display = "flex"
+    document.getElementById("bg-img").style.display = "none";
+    document.getElementById("trivia-game-focus").style.display = "flex";
 
     event.preventDefault();
     amount=document.getElementById("trivia_amount").value;
@@ -19,7 +19,6 @@ accesValuesForm= async event => {
     accesApi= await fetch(urlApi);
     accesApiJSON= await accesApi.json();
     accesResult = await accesApiJSON.results;
-    // console.log(accesResult)
 
     initialsPoints= accesResult.length;
     points=1;
@@ -33,8 +32,8 @@ accesValuesForm= async event => {
 
         //START title Questions//
        question=accesResult[index].question;
-       createTitle= document.createElement("h2")
-       createTitle.setAttribute("class", "title-questions")
+       createTitle= document.createElement("h2");
+       createTitle.setAttribute("class", "title-questions");
        createTitle.innerText = question;
        titleQuestion.appendChild(createTitle);
        //END title Questions//
@@ -57,21 +56,12 @@ accesValuesForm= async event => {
         
         allanswers.appendChild(createButton2)
         //END answers//
-
-        //SCORE
-        sum=()=>{
-            points++
-        };
-        createButton.addEventListener("click", sum);
        })
         index++
-        score=points
-        //SCORE
 
     }
     addQuestion();
     
-    triviaExecute.addEventListener("submit", addQuestion)
+    triviaExecute.addEventListener("click", addQuestion);
 }
-
 accesForm.addEventListener("submit", accesValuesForm)
