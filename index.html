@@ -10,14 +10,27 @@
 </head>
 <body>
     <script src="./main.js" defer></script>
+    <script src="./btn-actions.js" defer></script>
     <div class="bg-style">
         <div id="bg-follow-filter" class="bg-follow-filter">
+            <div class='visual-margin-top' id="visual-margin-top">
+                <div class="header-box-visual-end">
+                    <div class="title-header-visual-end">Trivia Results</div>
+                    <div>
+                        <button class="share-button"></button>
+                        <button class="shut-X-button" id="shut-X-button"></button>
+                    </div>
+                </div>
+                <h2>All Answers and Score</h2>
+                <div id="content-visual-end-box" class="content-visual-end-box"></div>
+                <div id="final-score-item">final del documento</div>
+            </div>
             <div id="bg-img" class="bg-img">
                 <form id="form-content" class="bg-content-form">
                     <h1>Trivia Game</h1>
                     <div class="labels">
                         <label for="trivia_amount">Number of questions:</label>
-                        <input id="trivia_amount" type="number" value="10">
+                        <input id="trivia_amounts" value="10">
                     </div>
                     <div class="labels">
                         <label for="trivia_category">Select Category:</label>
@@ -76,12 +89,15 @@
                     </div>
                 </form>
             </div>
-            <form id="trivia-game-focus" class="trivia-game-focus">
+            <div id="trivia-game-focus" class="trivia-game-focus">
                 <div id="question-point" class="question-point"></div>
                 <div class="answers-point" id="answers-point">
+                    <button  class="butto-resp" id="butto-resp-1"></button>
+                    <button  class="butto-resp" id="butto-resp-2"></button>
+                    <button  class="butto-resp" id="butto-resp-3"></button>
+                    <button  class="butto-resp" id="butto-resp-4"></button>
                 </div>
-            </form>
-            <div id="end-trivia" class="end-trivia"></div>
+            </div>
         </div>
     </div>
 </body>
